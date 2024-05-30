@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  top: 0;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  height: 70px;
+  z-index: 5;
+}
+
+.lien {
+  display: flex;
+
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+li {
+  list-style-type: none;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 15px;
+  position: relative;
+}
+
+.contact {
+  margin-left: 30px;
+  background-color: rgba(84, 115, 189, 1);
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+.contact a {
+  color: white;
+}
+
+a:hover {
+  cursor: pointer;
+  color: rgb(95, 95, 95);
+}
+.div-img {
+  width: fit-content;
+}
+.div-img img {
+  width: 70px;
+  height: auto;
+  border-radius: 7px;
+  margin-right: 100px;
+}
