@@ -26,4 +26,21 @@ export class DataService {
     return this.http.get(`http://localhost:5000/coordonnees/${id}`);
   }
 
+
+  //appel de l'API pour les devis
+  getDataDevis() {
+    return this.http.get('http://localhost:5000/devis');
+  }
+  postDataDevis(data: any) {
+    return this.http.post('http://localhost:5000/devis', data);
+  }
+
+  deleteDevis(id: number): Observable<any> {
+    return this.http.delete(`http://localhost:5000/devis/${id}`);
+  }
+
+  readoneDevis(id: number): Observable<any> {
+    return this.http.get(`http://localhost:5000/devis/${id}`);
+  }
+
 }

@@ -1,1 +1,83 @@
 <p>devis-admin works!</p>
+<h1 class="text-center md:text-left">Estimation des Devis</h1>
+<div class="overflow-x-auto">
+  <table class="min-w-8 divide-y divide-gray-200 mx-auto mb-8 rounded.md">
+    <tbody class="bg-white divide-y divide-gray-200">
+      <tr>
+        <th class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+          ID
+        </th>
+        <th class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+          Nom
+        </th>
+        <th class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+          Prénom
+        </th>
+        <th class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+          Société
+        </th>
+        <th class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+          Surface
+        </th>
+        <th class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+          Estimation
+        </th>
+        <th class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+          Peinture
+        </th>
+        <th class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+          mail
+        </th>
+        <th class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+          Date de demande
+        </th>
+      </tr>
+      <tr *ngFor="let item of data">
+        <td class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+          {{ item.id }}
+        </td>
+        <td class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+          {{ item.nom }}
+        </td>
+        <td class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+          {{ item.prenom }}
+        </td>
+        <td class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+          {{ item.societe }}
+        </td>
+        <td class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+          {{ item.surface }}
+        </td>
+        <td class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+          {{ item.estimation }}
+        </td>
+        <td class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+          {{ item.peinture }}
+        </td>
+        <td class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+          {{ item.mail }}
+        </td>
+        <td class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+          {{ item.date_demande }}
+        </td>
+        <td class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+          <button
+            class="px-2 md:px-4 py-1 md:py-2 bg-red-500 text-white hover:bg-red-700 rounded-md"
+            (click)="delete(item.id)"
+          >
+            Delete
+          </button>
+        </td>
+        <td class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+          <button
+            [routerLink]="['/admin', 'detail', item.id]"
+            class="px-2 md:px-4 py-1 md:py-2 bg-blue-500 text-white hover:bg-blue-700 rounded-md"
+          >
+            Détails
+          </button>
+        </td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

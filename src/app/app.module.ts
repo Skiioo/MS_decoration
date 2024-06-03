@@ -14,6 +14,8 @@ import { AdminComponent } from './pages/admin/admin.component';
 import { ContactAdminComponent } from './pages/pages-admin/contact-admin/contact-admin.component';
 import { DevisAdminComponent } from './pages/pages-admin/devis-admin/devis-admin.component';
 import { DetailsComponent } from './pages/pages-admin/details/details.component';
+import { DevisComponent } from './pages/devis/devis.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import { DetailsComponent } from './pages/pages-admin/details/details.component'
     AdminComponent,
     ContactAdminComponent,
     DevisAdminComponent,
-    DetailsComponent
+    DetailsComponent,
+    DevisComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

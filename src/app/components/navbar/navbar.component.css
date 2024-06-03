@@ -41,6 +41,10 @@ li {
   padding: 5px 10px;
   border-radius: 10px;
 }
+.contact:hover {
+  background-color: rgba(84, 115, 189, 0.8);
+  cursor: pointer;
+}
 .contact a {
   color: white;
 }

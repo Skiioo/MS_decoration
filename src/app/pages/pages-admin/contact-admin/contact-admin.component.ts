@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrl: './contact-admin.component.css'
 })
 export class ContactAdminComponent {
-
+ 
 
   data: any[] = []; // Cette propriété stockera le nom provenant de l'API
 

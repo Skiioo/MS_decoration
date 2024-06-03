@@ -9,6 +9,7 @@ import { AdminComponent } from './pages/admin/admin.component';
 import { ContactAdminComponent } from './pages/pages-admin/contact-admin/contact-admin.component';
 import { DevisAdminComponent } from './pages/pages-admin/devis-admin/devis-admin.component';
 import { DetailsComponent } from './pages/pages-admin/details/details.component';
+import { DevisComponent } from './pages/devis/devis.component';
 
 
 
@@ -16,10 +17,13 @@ import { DetailsComponent } from './pages/pages-admin/details/details.component'
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'a-propos', component: AProposComponent },
+  { path: 'devis', component: DevisComponent},
   {
     path: 'admin',
     component: AdminComponent,
     children: [
+      
+      { path: '', component: ContactAdminComponent },
       { path: 'contact-admin', component: ContactAdminComponent },
       { path: 'devis-admin', component: DevisAdminComponent },
       { path: 'detail/:id', component: DetailsComponent }
