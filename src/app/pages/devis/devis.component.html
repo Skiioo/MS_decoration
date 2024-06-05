@@ -1,1 +1,83 @@
-<p>devis works!</p>
+<h1 class="text-2xl font-medium mb-5">Éstimé votre devis ?</h1>
+
+<div
+  class="max-w-xl mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-xl m-4 mt-9"
+>
+  <div class="md">
+    <div class="p-8">
+      <form action="" class="space-y-4">
+        <div>
+          <label for="nom" class="block text-sm font-medium text-gray-700"
+            >Nom</label
+          >
+          <input
+            type="text"
+            class="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            id="nom"
+            placeholder="Nom"
+          />
+        </div>
+        <div>
+          <label for="statut" class="block text-sm font-medium text-gray-700"
+            >Statut juridique</label
+          >
+          <select
+            class="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            id="statut"
+          >
+            <option value="">Sélectionnez...</option>
+            <option value="option1">Particulier</option>
+            <option value="option2">Professionnel</option>
+          </select>
+        </div>
+        <div>
+          <label for="surface" class="block text-sm font-medium text-gray-700"
+            >Surface</label
+          >
+          <input
+            type="number"
+            [(ngModel)]="surface"
+            class="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            id="surface"
+            name="surface"
+            placeholder="Surface en m²"
+          />
+        </div>
+        <div>
+          <label for="style" class="block text-sm font-medium text-gray-700"
+            >Style de peinture</label
+          >
+          <select
+            class="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            id="style"
+            [(ngModel)]="style"
+            name="style"
+          >
+            <option value="0">Sélectionnez...</option>
+            <option value="10">Matte</option>
+            <option value="100">Brillant</option>
+          </select>
+        </div>
+        <div class="estimation-result" name="estimation">
+          <h2>Estimation :</h2>
+          <p>{{ estimation }} €</p>
+        </div>
+        <div class="flex flex-col">
+          <button
+            (click)="estimate()"
+            type="button"
+            class="w-15 py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 mb-4"
+          >
+            Estimer
+          </button>
+          <button
+            type="submit"
+            class="w-15 py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+          >
+            Envoyer
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

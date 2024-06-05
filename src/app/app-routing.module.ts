@@ -10,6 +10,8 @@ import { ContactAdminComponent } from './pages/pages-admin/contact-admin/contact
 import { DevisAdminComponent } from './pages/pages-admin/devis-admin/devis-admin.component';
 import { DetailsComponent } from './pages/pages-admin/details/details.component';
 import { DevisComponent } from './pages/devis/devis.component';
+import { MentionsLegalesComponent } from './pages/mentions-legales/mentions-legales.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 
 
@@ -18,6 +20,8 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'a-propos', component: AProposComponent },
   { path: 'devis', component: DevisComponent},
+  { path: 'mentions-legales', component: MentionsLegalesComponent },
+  { path: 'contact', component: ContactComponent },
   {
     path: 'admin',
     component: AdminComponent,

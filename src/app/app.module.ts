@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router'; // Import RouterModule
 import { HttpClientModule,HttpClientJsonpModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 
 
 
@@ -16,6 +18,8 @@ import { DevisAdminComponent } from './pages/pages-admin/devis-admin/devis-admin
 import { DetailsComponent } from './pages/pages-admin/details/details.component';
 import { DevisComponent } from './pages/devis/devis.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { MentionsLegalesComponent } from './pages/mentions-legales/mentions-legales.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 
 @NgModule({
@@ -29,14 +33,17 @@ import { FooterComponent } from './components/footer/footer.component';
     DevisAdminComponent,
     DetailsComponent,
     DevisComponent,
-    FooterComponent
+    FooterComponent,
+    MentionsLegalesComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
     HttpClientModule,
-    HttpClientJsonpModule
+    HttpClientJsonpModule,
+    FormsModule
     
   ],
   providers: [
