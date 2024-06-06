@@ -2,6 +2,7 @@
 
 <form
   class="max-w-xl mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-xl m-4 mt-9"
+  [formGroup]="contactForm"
 >
   <div class="p-8">
     <div class="mb-4">
@@ -14,8 +15,15 @@
         type="text"
         placeholder="Prénom"
         name="Prénom"
-        [(ngModel)]="data.prenom"
       />
+      <div
+        *ngIf="
+          contactForm.controls.prenom.invalid &&
+          contactForm.controls.prenom.touched
+        "
+      >
+        Le prénom est requis.
+      </div>
     </div>
     <div class="mb-4">
       <label class="block text-gray-700 text-sm font-bold mb-2" for="lastname">
@@ -27,8 +35,14 @@
         type="text"
         placeholder="Nom"
         name="Nom"
-        [(ngModel)]="data.nom"
       />
+      <div
+        *ngIf="
+          contactForm.controls.nom.invalid && contactForm.controls.nom.touched
+        "
+      >
+        Le nom est requis.
+      </div>
     </div>
     <div class="mb-4">
       <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
@@ -41,7 +55,16 @@
         type="email"
         placeholder="Email"
         [(ngModel)]="data.email"
+        required
       />
+      <div
+        *ngIf="
+          contactForm.controls.email.invalid &&
+          contactForm.controls.email.touched
+        "
+      >
+        L'email est requis.
+      </div>
     </div>
     <div class="mb-4">
       <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
@@ -53,7 +76,6 @@
         name="statut_juridique"
         type="email"
         placeholder=" Statut juridique"
-        [(ngModel)]="data.statut_juridique"
       />
     </div>
     <div class="mb-4">
@@ -66,7 +88,6 @@
         name="surface"
         type="email"
         placeholder=" Surface en m²"
-        [(ngModel)]="data.surface"
       />
     </div>
     <div class="mb-4">
@@ -79,7 +100,6 @@
         name="peinture"
         type="email"
         placeholder="Type de peinture"
-        [(ngModel)]="data.peinture"
       />
     </div>
     <div class="mb-4">
@@ -92,7 +112,6 @@
         type="tel"
         placeholder="Numéro de téléphone"
         name="num"
-        [(ngModel)]="data.num"
       />
     </div>
     <div class="mb-6">
@@ -107,7 +126,6 @@
         id="description"
         placeholder="Description"
         name="description"
-        [(ngModel)]="data.description"
       ></textarea>
     </div>
     <div class="flex items-center justify-between">
@@ -115,6 +133,7 @@
         class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
         type="button"
         (click)="postData()"
+        routerLink="/feedback-contact"
       >
         Envoyer
       </button>

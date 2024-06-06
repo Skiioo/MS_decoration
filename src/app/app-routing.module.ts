@@ -12,6 +12,8 @@ import { DetailsComponent } from './pages/pages-admin/details/details.component'
 import { DevisComponent } from './pages/devis/devis.component';
 import { MentionsLegalesComponent } from './pages/mentions-legales/mentions-legales.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { FbcontactComponent } from './pages/feedback/fbcontact/fbcontact.component';
+import { DetailsDevisComponent } from './pages/pages-admin/details-devis/details-devis.component';
 
 
 
@@ -22,6 +24,7 @@ const routes: Routes = [
   { path: 'devis', component: DevisComponent},
   { path: 'mentions-legales', component: MentionsLegalesComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'feedback-contact', component: FbcontactComponent },
   {
     path: 'admin',
     component: AdminComponent,
@@ -30,7 +33,9 @@ const routes: Routes = [
       { path: '', component: ContactAdminComponent },
       { path: 'contact-admin', component: ContactAdminComponent },
       { path: 'devis-admin', component: DevisAdminComponent },
-      { path: 'detail/:id', component: DetailsComponent }
+      { path: 'details/:id', component: DetailsComponent },
+      { path: 'details-devis/:id', component: DetailsDevisComponent }
+
     ]
   },
 ];

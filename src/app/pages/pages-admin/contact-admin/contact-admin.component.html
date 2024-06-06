@@ -15,8 +15,9 @@
         <th class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
           Email
         </th>
+
         <th class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-          Numéro
+          Surface en m²
         </th>
         <th class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
           Description
@@ -36,8 +37,9 @@
         <td class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
           {{ item.email }}
         </td>
+
         <td class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-          {{ item.num }}
+          {{ item.surface }}
         </td>
         <td class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
           {{ item.description }}
@@ -52,7 +54,7 @@
         </td>
         <td class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
           <button
-            [routerLink]="['/admin', 'detail', item.id]"
+            [routerLink]="['/admin', 'details', item.id]"
             class="px-2 md:px-4 py-1 md:py-2 bg-blue-500 text-white hover:bg-blue-700 rounded-md"
           >
             Détails

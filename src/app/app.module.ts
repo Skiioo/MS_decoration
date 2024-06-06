@@ -3,6 +3,8 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 import { RouterModule } from '@angular/router'; // Import RouterModule
 import { HttpClientModule,HttpClientJsonpModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { Validator } from '@angular/forms';
 
 
 
@@ -20,6 +22,8 @@ import { DevisComponent } from './pages/devis/devis.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MentionsLegalesComponent } from './pages/mentions-legales/mentions-legales.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { FbcontactComponent } from './pages/feedback/fbcontact/fbcontact.component';
+import { DetailsDevisComponent } from './pages/pages-admin/details-devis/details-devis.component';
 
 
 @NgModule({
@@ -35,7 +39,9 @@ import { ContactComponent } from './pages/contact/contact.component';
     DevisComponent,
     FooterComponent,
     MentionsLegalesComponent,
-    ContactComponent
+    ContactComponent,
+    FbcontactComponent,
+    DetailsDevisComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +49,8 @@ import { ContactComponent } from './pages/contact/contact.component';
     RouterModule,
     HttpClientModule,
     HttpClientJsonpModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
     
   ],
   providers: [
