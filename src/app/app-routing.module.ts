@@ -14,6 +14,7 @@ import { MentionsLegalesComponent } from './pages/mentions-legales/mentions-lega
 import { ContactComponent } from './pages/contact/contact.component';
 import { FbcontactComponent } from './pages/feedback/fbcontact/fbcontact.component';
 import { DetailsDevisComponent } from './pages/pages-admin/details-devis/details-devis.component';
+import { RealComponent } from './pages/real/real.component';
 
 
 
@@ -25,6 +26,8 @@ const routes: Routes = [
   { path: 'mentions-legales', component: MentionsLegalesComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'feedback-contact', component: FbcontactComponent },
+  { path: 'realisation', component: RealComponent },
+
   {
     path: 'admin',
     component: AdminComponent,

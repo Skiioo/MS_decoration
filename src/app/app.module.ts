@@ -24,6 +24,7 @@ import { MentionsLegalesComponent } from './pages/mentions-legales/mentions-lega
 import { ContactComponent } from './pages/contact/contact.component';
 import { FbcontactComponent } from './pages/feedback/fbcontact/fbcontact.component';
 import { DetailsDevisComponent } from './pages/pages-admin/details-devis/details-devis.component';
+import { RealComponent } from './pages/real/real.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { DetailsDevisComponent } from './pages/pages-admin/details-devis/details
     MentionsLegalesComponent,
     ContactComponent,
     FbcontactComponent,
-    DetailsDevisComponent
+    DetailsDevisComponent,
+    RealComponent
   ],
   imports: [
     BrowserModule,
