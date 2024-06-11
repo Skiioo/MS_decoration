@@ -5,9 +5,13 @@
   class="max-w-xl mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-xl m-4 mt-9"
 >
   <div class="div-input p-8">
-    <div class="mb-4">
+    <div class="div-input mb-4">
       <label class="block text-gray-700 text-sm font-bold mb-2" for="lastname">
         Nom *
+        <span
+          *ngIf="form.controls['nom'].touched && form.controls['nom'].errors?.['required']"
+          >Merci de compléter le champs "Nom"</span
+        >
       </label>
 
       <input
@@ -19,15 +23,14 @@
         formControlName="nom"
       />
     </div>
-    <div class="error-container">
-      <span
-        *ngIf="form.controls['nom'].touched && form.controls['nom'].errors?.['required']"
-        >Merci de compléter le champs "Nom"</span
-      >
-    </div>
-    <div class="mb-4">
+
+    <div class="div-input mb-4">
       <label class="block text-gray-700 text-sm font-bold mb-2" for="firstname">
         Prénom *
+        <span
+          *ngIf="form.controls['prenom'].touched && form.controls['prenom'].errors?.['required']"
+          >Merci de compléter le champs "Prénom"</span
+        >
       </label>
 
       <input
@@ -39,16 +42,18 @@
         formControlName="prenom"
       />
     </div>
-    <div class="error-container">
-      <span
-        *ngIf="form.controls['prenom'].touched && form.controls['prenom'].errors?.['required']"
-        >Merci de compléter le champs "Prénom"</span
-      >
-    </div>
 
-    <div class="mb-4">
+    <div class="dic-input mb-4">
       <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
         Email *
+        <span
+          *ngIf="form.controls['email'].touched && form.controls['email'].errors?.['required']"
+          >Merci de compléter le champs "email"</span
+        >
+        <span
+          *ngIf="form.controls['email'].touched && form.controls['email'].errors?.['email']"
+          >Merci de compléter avec un email valide</span
+        >
       </label>
 
       <input
@@ -60,20 +65,17 @@
         formControlName="email"
       />
     </div>
-    <div class="error-container">
-      <span
-        *ngIf="form.controls['email'].touched && form.controls['email'].errors?.['required']"
-        >Merci de compléter le champs "email"</span
-      >
-      <span
-        *ngIf="form.controls['email'].touched && form.controls['email'].errors?.['email']"
-        >Merci de compléter avec un email valide</span
-      >
-    </div>
 
-    <div class="mb-4">
+    <div class="div-input mb-4">
       <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">
         Numéro de téléphone *
+        <span
+          *ngIf="form.controls['num'].touched && form.controls['num'].errors?.['required'] "
+          >Merci de compléter le champs "Numéro de téléphone"</span
+        >
+        <span *ngIf=" form.controls['num'].errors?.['pattern']"
+          >Merci de compléter avec un numéro de téléphone valide</span
+        >
       </label>
 
       <input
@@ -85,21 +87,17 @@
         formControlName="num"
       />
     </div>
-    <div class="error-container">
-      <span
-        *ngIf="form.controls['num'].touched && form.controls['num'].errors?.['required'] "
-        >Merci de compléter le champs "Numéro de téléphone"</span
-      >
-      <span *ngIf=" form.controls['num'].errors?.['pattern']"
-        >Merci de compléter avec un numéro de téléphone valide</span
-      >
-    </div>
-    <div class="mb-6">
+
+    <div class="div-input mb-6">
       <label
         class="block text-gray-700 text-sm font-bold mb-2"
         for="description"
       >
         Description de votre projet *
+        <span
+          *ngIf="form.controls['description'].touched && form.controls['description'].errors?.['required']"
+          >Merci de compléter le champs</span
+        >
       </label>
       <textarea
         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -108,12 +106,6 @@
         name="description"
         formControlName="description"
       ></textarea>
-    </div>
-    <div class="error-container">
-      <span
-        *ngIf="form.controls['description'].touched && form.controls['description'].errors?.['required']"
-        >Merci de compléter le champs</span
-      >
     </div>
 
     <div class="flex items-center justify-between">

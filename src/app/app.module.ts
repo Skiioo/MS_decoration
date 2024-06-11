@@ -26,6 +26,7 @@ import { FbcontactComponent } from './pages/feedback/fbcontact/fbcontact.compone
 import { DetailsDevisComponent } from './pages/pages-admin/details-devis/details-devis.component';
 import { RealComponent } from './pages/real/real.component';
 import { CommonModule } from '@angular/common';
+import { FbdevisComponent } from './pages/feedback/fbdevis/fbdevis.component';
 
 
 
@@ -46,6 +47,7 @@ import { CommonModule } from '@angular/common';
     FbcontactComponent,
     DetailsDevisComponent,
     RealComponent,
+    FbdevisComponent,
 
 
   ],

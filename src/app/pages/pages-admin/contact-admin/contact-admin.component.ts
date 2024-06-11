@@ -18,7 +18,7 @@ export class ContactAdminComponent {
       this.data = data;
     });
 
-  }
+  } 
   delete(id: number) {
     this.dataService.delete(id).subscribe(
       response => {

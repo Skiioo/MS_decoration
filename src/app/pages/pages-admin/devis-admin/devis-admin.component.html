@@ -13,8 +13,12 @@
           Prénom
         </th>
         <th class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+          statut_juridique
+        </th>
+        <th class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
           Société
         </th>
+        <!--
         <th class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
           Surface
         </th>
@@ -24,8 +28,10 @@
         <th class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
           Peinture
         </th>
+        -->
+
         <th class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-          mail
+          Email
         </th>
         <th class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
           Date de demande
@@ -42,22 +48,38 @@
           {{ item.prenom }}
         </td>
         <td class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+          {{ item.statut_juridique }}
+        </td>
+        <td class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
           {{ item.societe }}
         </td>
+
+        <!--
         <td class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-          {{ item.surface }}
+          {{ item.surface }} m²
         </td>
         <td class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-          {{ item.estimation }}
+          {{ item.estimation }} €
         </td>
         <td class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
           {{ item.peinture }}
         </td>
+        -->
+
         <td class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-          {{ item.mail }}
+          {{ item.email }}
         </td>
         <td class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
           {{ item.date_demande }}
+        </td>
+
+        <td class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+          <button
+            [routerLink]="['/admin', 'details-devis', item.id]"
+            class="px-2 md:px-4 py-1 md:py-2 bg-blue-500 text-white hover:bg-blue-700 rounded-md"
+          >
+            Détails
+          </button>
         </td>
         <td class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
           <button
@@ -67,15 +89,6 @@
             Delete
           </button>
         </td>
-        <td class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-          <button
-            [routerLink]="['/admin', 'details-devis', item.id]"
-            class="px-2 md:px-4 py-1 md:py-2 bg-blue-500 text-white hover:bg-blue-700 rounded-md"
-          >
-            Détails
-          </button>
-        </td>
-        <td></td>
       </tr>
     </tbody>
   </table>

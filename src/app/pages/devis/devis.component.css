@@ -43,3 +43,8 @@ h3 {
   background-color: rgb(255, 0, 0);
   z-index: 1; /* Change this to a lower value */
 }
+
+.div-input span {
+  color: rgb(255, 0, 0);
+  margin-left: 10px;
+}

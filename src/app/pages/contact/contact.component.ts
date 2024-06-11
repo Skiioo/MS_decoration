@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { DataService } from '../../data.service';
-import { HttpClient } from '@angular/common/http';
-import { Directive, Input } from '@angular/core';
+
+
 import { ControlContainer, FormControl, FormGroup, FormGroupDirective, ReactiveFormsModule, RequiredValidator, Validators } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { CommonModule, FormatWidth } from '@angular/common';
@@ -46,11 +46,13 @@ export class ContactComponent {
 
   
   postData() {
-    // Check if all properties of data are filled
+    //vérification des donner des les inputs
     if (Object.values(this.form.value).every(value => value !== '')) {
       this.dataService.postData(this.form.value).subscribe(
         response => {
           console.log('Données envoyées avec succès', response);
+
+          //redirection de l'utilisateur quand le formulaire est validé
           this.router.navigate(['feedback-contact'])
         },
         error => {

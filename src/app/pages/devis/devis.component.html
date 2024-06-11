@@ -7,101 +7,163 @@
     <h2 class="text-lg font-medium mb-5">Envoyez votre estimation</h2>
     <div class="md">
       <div class="p-20">
-        <form action="" class="space-y-4">
-          <div>
+        <form action="" class="space-y-4" [formGroup]="form">
+          <div class="div-input">
             <label for="nom" class="block text-sm font-medium text-gray-700"
-              >Nom</label
+              >Nom *
+              <span
+                *ngIf="form.controls['nom'].touched && form.controls['nom'].errors?.['required']"
+                >Merci de compléter le champs "Nom"</span
+              ></label
             >
             <input
               type="text"
               class="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
               id="nom"
               placeholder="Nom"
+              formControlName="nom"
             />
           </div>
-          <div>
+          <div class="error-container"></div>
+          <div class="div-input">
             <label for="nom" class="block text-sm font-medium text-gray-700"
-              >Prénom</label
+              >Prénom *
+              <span
+                *ngIf="form.controls['prenom'].touched && form.controls['prenom'].errors?.['required']"
+                >Merci de compléter le champs "Prénom"</span
+              ></label
             >
             <input
               type="text"
               class="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
               id="nom"
               placeholder="Prénom"
+              formControlName="prenom"
             />
           </div>
-          <div>
+          <div class="div-input">
+            <label for="nom" class="block text-sm font-medium text-gray-700"
+              >Email *
+              <span
+                *ngIf="form.controls['email'].touched && form.controls['email'].errors?.['required']"
+                >Merci de compléter le champs "email"</span
+              >
+              <span
+                *ngIf="form.controls['email'].touched && form.controls['email'].errors?.['email']"
+                >Merci de compléter avec un email valide</span
+              ></label
+            >
+            <input
+              type="text"
+              class="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              id="nom"
+              placeholder="Email"
+              formControlName="email"
+            />
+          </div>
+
+          <!--
+           <div class="div-input">
             <label for="statut" class="block text-sm font-medium text-gray-700"
-              >Statut juridique</label
+              >Statut juridique *
+              <span
+                *ngIf="form.controls['statut_juridique'].touched && form.controls['statut_juridique'].errors?.['required'] "
+                >Merci de compléter le champs</span
+              ></label
             >
             <select
               class="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
               id="statut"
+              formControlName="statut_juridique"
             >
               <option value="">Sélectionnez...</option>
               <option value="Partuculiers">Particulier</option>
               <option value="Professionnel">Professionnel</option>
             </select>
           </div>
+          -->
+
           <div>
-            <label for="surface" class="block text-sm font-medium text-gray-700"
-              >Nom de m'entreprise</label
+            <label for="" class="block text-sm font-medium text-gray-700"
+              >Nom de l'entreprise</label
             >
             <input
-              type="number"
-              [(ngModel)]="surface"
+              type="texte"
               class="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-              id="surface"
-              name="surface"
-              placeholder="Surface en m²"
+              id="name_entreprise"
+              name="name_entreprise"
+              placeholder="Nom de l'entreprise"
+              formControlName="societe"
             />
           </div>
-          <div>
+          <div class="div-input">
             <label for="surface" class="block text-sm font-medium text-gray-700"
-              >Surface au sol (en m²)</label
+              >Surface au sol (en m²) *
+              <span
+                *ngIf="form.controls['surface'].touched && form.controls['surface'].errors?.['required'] "
+                >Merci de compléter le champs "Surface"</span
+              ></label
             >
             <input
               type="number"
-              [(ngModel)]="surface"
               class="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
               id="surface"
               name="surface"
               placeholder="Surface en m²"
+              formControlName="surface"
             />
           </div>
           <div>
             <label for="style" class="block text-sm font-medium text-gray-700"
-              >Style de peinture</label
-            >
+              >Style de peinture
+            </label>
             <select
               class="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
               id="style"
-              [(ngModel)]="style"
               name="style"
+              formControlName="peinture"
             >
               <option value="">Sélectionnez...</option>
-              <option value="">Matte</option>
-              <option value="">Brillant</option>
+              <option value="Matte">Matte</option>
+              <option value="Brillant">Brillant</option>
             </select>
           </div>
 
           <div>
             <label for="surface" class="block text-sm font-medium text-gray-700"
-              >Prix estimé</label
-            >
+              >Prix estimé
+            </label>
             <input
               type="number"
-              [(ngModel)]="surface"
               class="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
               id="surface"
               name="surface"
-              placeholder="Surface en m²"
+              placeholder="Estimation du prix"
+              formControlName="estimation"
             />
+          </div>
+          <div class="div-input">
+            <label class="block text-sm font-medium text-gray-700"
+              >Description du projet *
+              <span
+                *ngIf="form.controls['description'].touched && form.controls['description'].errors?.['required']"
+                >Merci de compléter le champs</span
+              ></label
+            >
+            <textarea
+              type="text"
+              class="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              id="description"
+              name="description"
+              placeholder="Description de votre projet "
+              formControlName="description"
+            ></textarea>
           </div>
           <div class="flex flex-col">
             <button
               type="submit"
               class="w-15 py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+              (click)="postDataDevis()"
             >
               Envoyer
             </button>
@@ -114,7 +176,7 @@
   <div
     class="flex-1 max-w-xl mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-xl m-4 mt-9"
   >
-    <h2 class="text-lg font-medium mb-5">Estimation</h2>
+    <h2 class="text-lg font-medium mb-5">Estimer votre prix</h2>
 
     <div class="md">
       <div class="p-20">
@@ -125,11 +187,11 @@
             </label>
             <input
               type="number"
-              [(ngModel)]="surface"
               class="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
               id="surface"
               name="surface"
               placeholder="Surface en m²"
+              [(ngModel)]="surface"
             />
           </div>
           <div>
@@ -139,8 +201,8 @@
             <select
               class="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
               id="style"
-              [(ngModel)]="style"
               name="style"
+              [(ngModel)]="style"
             >
               <option value="0">Sélectionnez...</option>
               <option value="0.5">Matte</option>

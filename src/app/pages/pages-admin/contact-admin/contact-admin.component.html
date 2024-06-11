@@ -44,14 +44,7 @@
         >
           {{ item.description }}
         </td>
-        <td class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-          <button
-            class="px-2 md:px-4 py-1 md:py-2 bg-red-500 text-white hover:bg-red-700 rounded-md"
-            (click)="delete(item.id)"
-          >
-            Delete
-          </button>
-        </td>
+
         <td class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
           <button
             [routerLink]="['/admin', 'details', item.id]"
@@ -60,7 +53,14 @@
             Détails
           </button>
         </td>
-        <td></td>
+        <td class="px-2 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+          <button
+            class="px-2 md:px-4 py-1 md:py-2 bg-red-500 text-white hover:bg-red-700 rounded-md"
+            (click)="delete(item.id)"
+          >
+            Delete
+          </button>
+        </td>
       </tr>
     </tbody>
   </table>
