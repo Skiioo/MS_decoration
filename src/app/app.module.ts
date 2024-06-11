@@ -25,6 +25,9 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { FbcontactComponent } from './pages/feedback/fbcontact/fbcontact.component';
 import { DetailsDevisComponent } from './pages/pages-admin/details-devis/details-devis.component';
 import { RealComponent } from './pages/real/real.component';
+import { CommonModule } from '@angular/common';
+
+
 
 
 @NgModule({
@@ -40,10 +43,11 @@ import { RealComponent } from './pages/real/real.component';
     DevisComponent,
     FooterComponent,
     MentionsLegalesComponent,
-    ContactComponent,
     FbcontactComponent,
     DetailsDevisComponent,
-    RealComponent
+    RealComponent,
+
+
   ],
   imports: [
     BrowserModule,
@@ -51,6 +55,9 @@ import { RealComponent } from './pages/real/real.component';
     RouterModule,
     HttpClientModule,
     HttpClientJsonpModule,
+    FormsModule,
+    ReactiveFormsModule,
+    CommonModule,
     FormsModule,
     ReactiveFormsModule
     

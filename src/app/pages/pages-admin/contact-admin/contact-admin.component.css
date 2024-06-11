@@ -6,3 +6,8 @@ h1 {
   margin-bottom: 50px;
   font-family: Inter;
 }
+
+.fixed-width {
+  width: 200px !important;
+  overflow: hidden;
+}

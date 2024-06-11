@@ -1,136 +1,124 @@
 <h1>Contactez-nous !</h1>
 
 <form
+  [formGroup]="form"
   class="max-w-xl mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-xl m-4 mt-9"
-  [formGroup]="contactForm"
 >
-  <div class="p-8">
-    <div class="mb-4">
-      <label class="block text-gray-700 text-sm font-bold mb-2" for="firstname">
-        Prénom
-      </label>
-      <input
-        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-        id="firstname"
-        type="text"
-        placeholder="Prénom"
-        name="Prénom"
-      />
-      <div
-        *ngIf="
-          contactForm.controls.prenom.invalid &&
-          contactForm.controls.prenom.touched
-        "
-      >
-        Le prénom est requis.
-      </div>
-    </div>
+  <div class="div-input p-8">
     <div class="mb-4">
       <label class="block text-gray-700 text-sm font-bold mb-2" for="lastname">
-        Nom
+        Nom *
       </label>
+
       <input
         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-        id="lastname"
+        id="nom"
         type="text"
         placeholder="Nom"
-        name="Nom"
+        name="nom"
+        formControlName="nom"
       />
-      <div
-        *ngIf="
-          contactForm.controls.nom.invalid && contactForm.controls.nom.touched
-        "
+    </div>
+    <div class="error-container">
+      <span
+        *ngIf="form.controls['nom'].touched && form.controls['nom'].errors?.['required']"
+        >Merci de compléter le champs "Nom"</span
       >
-        Le nom est requis.
-      </div>
     </div>
     <div class="mb-4">
-      <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
-        Email
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="firstname">
+        Prénom *
       </label>
+
+      <input
+        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        id="prenom"
+        type="text"
+        placeholder="Prénom"
+        name="prenom"
+        formControlName="prenom"
+      />
+    </div>
+    <div class="error-container">
+      <span
+        *ngIf="form.controls['prenom'].touched && form.controls['prenom'].errors?.['required']"
+        >Merci de compléter le champs "Prénom"</span
+      >
+    </div>
+
+    <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+        Email *
+      </label>
+
       <input
         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         id="email"
         name="email"
         type="email"
         placeholder="Email"
-        [(ngModel)]="data.email"
-        required
+        formControlName="email"
       />
-      <div
-        *ngIf="
-          contactForm.controls.email.invalid &&
-          contactForm.controls.email.touched
-        "
+    </div>
+    <div class="error-container">
+      <span
+        *ngIf="form.controls['email'].touched && form.controls['email'].errors?.['required']"
+        >Merci de compléter le champs "email"</span
       >
-        L'email est requis.
-      </div>
+      <span
+        *ngIf="form.controls['email'].touched && form.controls['email'].errors?.['email']"
+        >Merci de compléter avec un email valide</span
+      >
     </div>
-    <div class="mb-4">
-      <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
-        Statut juridique
-      </label>
-      <input
-        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-        id="email"
-        name="statut_juridique"
-        type="email"
-        placeholder=" Statut juridique"
-      />
-    </div>
-    <div class="mb-4">
-      <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
-        Surface
-      </label>
-      <input
-        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-        id="email"
-        name="surface"
-        type="email"
-        placeholder=" Surface en m²"
-      />
-    </div>
-    <div class="mb-4">
-      <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
-        Peinture
-      </label>
-      <input
-        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-        id="email"
-        name="peinture"
-        type="email"
-        placeholder="Type de peinture"
-      />
-    </div>
+
     <div class="mb-4">
       <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">
-        Numéro de téléphone
+        Numéro de téléphone *
       </label>
+
       <input
         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         id="phone"
-        type="tel"
+        type="number"
         placeholder="Numéro de téléphone"
         name="num"
+        formControlName="num"
       />
+    </div>
+    <div class="error-container">
+      <span
+        *ngIf="form.controls['num'].touched && form.controls['num'].errors?.['required'] "
+        >Merci de compléter le champs "Numéro de téléphone"</span
+      >
+      <span *ngIf=" form.controls['num'].errors?.['pattern']"
+        >Merci de compléter avec un numéro de téléphone valide</span
+      >
     </div>
     <div class="mb-6">
       <label
         class="block text-gray-700 text-sm font-bold mb-2"
         for="description"
       >
-        Description
+        Description de votre projet *
       </label>
       <textarea
         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         id="description"
         placeholder="Description"
         name="description"
+        formControlName="description"
       ></textarea>
     </div>
+    <div class="error-container">
+      <span
+        *ngIf="form.controls['description'].touched && form.controls['description'].errors?.['required']"
+        >Merci de compléter le champs</span
+      >
+    </div>
+
     <div class="flex items-center justify-between">
       <button
-        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        class="bg-blue-500 mt-9 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
         type="button"
         (click)="postData()"
         routerLink="/feedback-contact"
