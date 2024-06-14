@@ -11,7 +11,23 @@ h1 {
   color: rgb(0, 0, 0);
   font-size: 30px;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 25px;
   margin-bottom: 50px;
   font-family: Inter;
+}
+
+.div-princ {
+  display: flex;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 75px;
+}
+
+.titre span {
+  font-weight: 600;
+}
+
+.div-container-1 {
+  margin-right: 100px;
 }

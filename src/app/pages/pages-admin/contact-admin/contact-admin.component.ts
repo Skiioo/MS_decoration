@@ -2,11 +2,14 @@ import { Component } from '@angular/core';
 import { DataService } from '../../../data.service';
 import { HttpClient } from '@angular/common/http';
 
+
 @Component({
   selector: 'app-contact-admin',
   templateUrl: './contact-admin.component.html',
   styleUrl: './contact-admin.component.css'
 })
+
+
 export class ContactAdminComponent {
  
 

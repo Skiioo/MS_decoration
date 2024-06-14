@@ -30,7 +30,8 @@ const routes: Routes = [
   { path: 'feedback-contact', component: FbcontactComponent },
   { path: 'realisation', component: RealComponent },
   {path: 'feedback-devis', component: FbdevisComponent},
-  {path: '404', component: ErrorPageComponent},
+
+ 
 
   {
     path: 'admin',

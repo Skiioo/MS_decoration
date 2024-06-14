@@ -28,6 +28,7 @@ import { RealComponent } from './pages/real/real.component';
 import { CommonModule } from '@angular/common';
 import { FbdevisComponent } from './pages/feedback/fbdevis/fbdevis.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
+import { BackgroundComponent } from './components/background/background.component';
 
 
 
@@ -50,6 +51,7 @@ import { ErrorPageComponent } from './pages/error-page/error-page.component';
     RealComponent,
     FbdevisComponent,
     ErrorPageComponent,
+    BackgroundComponent,
 
 
   ],

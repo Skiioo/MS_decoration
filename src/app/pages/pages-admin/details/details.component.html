@@ -1,29 +1,32 @@
 <h1 class="text-center md:text-left">Détails</h1>
-<div
-  href="#"
-  class="div-princ block mx-auto w-9/12 p-9 bg-white border border-gray-200 rounded-lg shadow dark:border-gray-700"
->
-  <h5 class="mb-2 text-2xl font-bold tracking-tight text-black">
-    {{ data?.nom }}
-    {{ data?.prenom }}
-  </h5>
-  <br />
-  <p class="font-normal text-gray-700 dark:text-gray-700">
-    <span class="titre">Email :</span> <br />
-    {{ data?.email }} <br />
+<div href="#" class="div-princ">
+  <div class="div-container-1">
+    <h5 class="mb-1 text-2xl font-bold tracking-tight text-black">
+      {{ data?.nom }}
+      {{ data?.prenom }}
+    </h5>
     <br />
-    <span class="titre"> Numéro de téléphone :</span> <br />
+    <p class="font-normal text-gray-700 dark:text-gray-700">
+      <span class="titre">Email :</span> <br />
+      {{ data?.email }} <br />
+      <br />
+      <span class="titre"> Numéro de téléphone :</span> <br />
 
-    0{{ data?.num }}
-  </p>
-  <br />
-  <p class="font-normal text-gray-700 dark:text-gray-700">
-    <span class="titre"
-      >Description du projet de monsieur {{ data?.nom }}
-      {{ data?.prenom }} :</span
-    >
-
+      0{{ data?.num }}
+    </p>
     <br />
-    {{ data?.description }}
-  </p>
+  </div>
+
+  <div class="div-container-2">
+    <p class="font-normal text-gray-700 dark:text-gray-700">
+      <span class="titre"
+        >Description du projet de monsieur
+        <span>{{ data?.nom }} {{ data?.prenom }}</span> :</span
+      >
+
+      <br />
+      <br />
+      {{ data?.description }}
+    </p>
+  </div>
 </div>
