@@ -16,6 +16,7 @@ import { FbcontactComponent } from './pages/feedback/fbcontact/fbcontact.compone
 import { DetailsDevisComponent } from './pages/pages-admin/details-devis/details-devis.component';
 import { RealComponent } from './pages/real/real.component';
 import { FbdevisComponent } from './pages/feedback/fbdevis/fbdevis.component';
+import { ErrorPageComponent } from './pages/error-page/error-page.component';
 
 
 
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path: 'feedback-contact', component: FbcontactComponent },
   { path: 'realisation', component: RealComponent },
   {path: 'feedback-devis', component: FbdevisComponent},
+  {path: '404', component: ErrorPageComponent},
 
   {
     path: 'admin',
@@ -43,6 +45,8 @@ const routes: Routes = [
 
     ]
   },
+
+  { path: '**', redirectTo: '404' },
 ];
 
 

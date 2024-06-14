@@ -27,6 +27,7 @@ import { DetailsDevisComponent } from './pages/pages-admin/details-devis/details
 import { RealComponent } from './pages/real/real.component';
 import { CommonModule } from '@angular/common';
 import { FbdevisComponent } from './pages/feedback/fbdevis/fbdevis.component';
+import { ErrorPageComponent } from './pages/error-page/error-page.component';
 
 
 
@@ -48,6 +49,7 @@ import { FbdevisComponent } from './pages/feedback/fbdevis/fbdevis.component';
     DetailsDevisComponent,
     RealComponent,
     FbdevisComponent,
+    ErrorPageComponent,
 
 
   ],

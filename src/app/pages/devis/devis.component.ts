@@ -22,7 +22,8 @@ form:FormGroup = new FormGroup({
   surface: new FormControl('', [Validators.required]),
   estimation: new FormControl('', [Validators.required]),
   peinture: new FormControl('', [Validators.required]),
-  statut_juridique: new FormControl('', [Validators.required])
+  typeclient: new FormControl('', [Validators.required]),
+  num: new FormControl('', [Validators.required]),
   
 })
 
@@ -35,17 +36,18 @@ data: any = {
   surface:'',
   peinture:'',
   estimation:'',
-  statut_juridique:'',
+  typeclient:'',
   
 
 }
 
 postDataDevis(){
-if (this.form.value.nom !== '' && this.form.value.prenom !== '' && this.form.value.email !== '' && this.form.value.surface !== '' && this.form.value.description !== '') {
+if (this.form.value.nom !== '' && this.form.value.prenom !== '' && this.form.value.email !== '' && this.form.value.surface !== '' && this.form.value.description !== '' && this.form.value.typeclient) {
 
   this.dataService.postDataDevis(this.form.value).subscribe(
     response => {
       console.log('Données envoyées avec succès', response);
+      console.log(this.form.value);
 
       this.router.navigate(['feedback-devis'])
     },

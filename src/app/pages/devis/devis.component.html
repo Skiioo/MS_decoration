@@ -1,4 +1,4 @@
-<h1 class="text-2xl font-medium mb-5">Estimé votre devis ?</h1>
+<h1 class="text-2xl font-medium mb-5">Estimé votre devis</h1>
 
 <div class="div-all flex flex-wrap justify-between">
   <div
@@ -13,7 +13,7 @@
               >Nom *
               <span
                 *ngIf="form.controls['nom'].touched && form.controls['nom'].errors?.['required']"
-                >Merci de compléter le champs "Nom"</span
+                >Merci de compléter le champs</span
               ></label
             >
             <input
@@ -30,8 +30,8 @@
               >Prénom *
               <span
                 *ngIf="form.controls['prenom'].touched && form.controls['prenom'].errors?.['required']"
-                >Merci de compléter le champs "Prénom"</span
-              ></label
+                >Merci de compléter le champs
+              </span></label
             >
             <input
               type="text"
@@ -41,13 +41,38 @@
               formControlName="prenom"
             />
           </div>
+          <div class="div-input mb-4">
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="phone"
+            >
+              Numéro de téléphone *
+              <span
+                *ngIf="form.controls['num'].touched && form.controls['num'].errors?.['required'] "
+                >Merci de compléter le champs "Numéro de téléphone"</span
+              >
+              <span *ngIf=" form.controls['num'].errors?.['pattern']"
+                >Merci de compléter avec un numéro de téléphone valide</span
+              >
+            </label>
+
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="phone"
+              type="number"
+              placeholder="Numéro de téléphone"
+              name="num"
+              formControlName="num"
+            />
+          </div>
+
           <div class="div-input">
             <label for="nom" class="block text-sm font-medium text-gray-700"
               >Email *
               <span
                 *ngIf="form.controls['email'].touched && form.controls['email'].errors?.['required']"
-                >Merci de compléter le champs "email"</span
-              >
+                >Merci de compléter le champs
+              </span>
               <span
                 *ngIf="form.controls['email'].touched && form.controls['email'].errors?.['email']"
                 >Merci de compléter avec un email valide</span
@@ -62,26 +87,24 @@
             />
           </div>
 
-          <!--
-           <div class="div-input">
+          <div class="div-input">
             <label for="statut" class="block text-sm font-medium text-gray-700"
-              >Statut juridique *
+              >Type de client *
               <span
-                *ngIf="form.controls['statut_juridique'].touched && form.controls['statut_juridique'].errors?.['required'] "
+                *ngIf="form.controls['typeclient'].touched && form.controls['typeclient'].errors?.['required'] "
                 >Merci de compléter le champs</span
               ></label
             >
             <select
               class="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
               id="statut"
-              formControlName="statut_juridique"
+              formControlName="typeclient"
             >
               <option value="">Sélectionnez...</option>
-              <option value="Partuculiers">Particulier</option>
+              <option value="Partuculier">Particulier</option>
               <option value="Professionnel">Professionnel</option>
             </select>
           </div>
-          -->
 
           <div>
             <label for="" class="block text-sm font-medium text-gray-700"
@@ -101,8 +124,8 @@
               >Surface au sol (en m²) *
               <span
                 *ngIf="form.controls['surface'].touched && form.controls['surface'].errors?.['required'] "
-                >Merci de compléter le champs "Surface"</span
-              ></label
+                >Merci de compléter le champs
+              </span></label
             >
             <input
               type="number"
@@ -129,9 +152,13 @@
             </select>
           </div>
 
-          <div>
+          <div class="div-input">
             <label for="surface" class="block text-sm font-medium text-gray-700"
               >Prix estimé
+              <span
+                *ngIf="form.controls['estimation'].touched && form.controls['estimation'].errors?.['required']"
+                >Merci de compléter le champs</span
+              >
             </label>
             <input
               type="number"
