@@ -1,0 +1,61 @@
+<h1>Connectez-vous !</h1>
+<form
+  [formGroup]="form"
+  (ngSubmit)="onSubmit()"
+  class="grande-div max-w-xl mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-xl m-4 mt-9"
+>
+  <div class="div-input p-8">
+    <div class="div-input mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+        ID *
+        <span
+          *ngIf="form.controls['id'].touched && form.controls['id'].errors?.['required']"
+          >Merci de compléter le champs "ID"</span
+        >
+      </label>
+
+      <input
+        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        id="username"
+        type="text"
+        placeholder="id"
+        name="username"
+        formControlName="id"
+      />
+    </div>
+
+    <div class="div-input mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+        Mot de passe *
+        <span
+          *ngIf="form.controls['mdp'].touched && form.controls['mdp'].errors?.['required']"
+          >Merci de compléter le champs "Mot de passe"</span
+        >
+      </label>
+
+      <input
+        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        id="password"
+        type="password"
+        placeholder="Mot de passe"
+        name="password"
+        formControlName="mdp"
+      />
+    </div>
+
+    <div class="flex items-center justify-between">
+      <span *ngIf="errorMessage" class="error-message">
+        {{ errorMessage }}
+      </span>
+      <button
+        class="bg-blue-500 mt-9 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        type="submit"
+        routerLink="/admin"
+        [disabled]="form.invalid"
+        (click)="onSubmit()"
+      >
+        Se connecter
+      </button>
+    </div>
+  </div>
+</form>

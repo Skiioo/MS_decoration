@@ -18,11 +18,15 @@ import { RealComponent } from './pages/real/real.component';
 import { FbdevisComponent } from './pages/feedback/fbdevis/fbdevis.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
 
+import { FormAdminComponent } from './pages/pages-admin/form-admin/form-admin.component';
+import { AuthGuard } from './auth.guard';
+
 
 
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  
   { path: 'a-propos', component: AProposComponent },
   { path: 'devis', component: DevisComponent},
   { path: 'mentions-legales', component: MentionsLegalesComponent },
@@ -30,19 +34,21 @@ const routes: Routes = [
   { path: 'feedback-contact', component: FbcontactComponent },
   { path: 'realisation', component: RealComponent },
   {path: 'feedback-devis', component: FbdevisComponent},
-
+  {path: 'form-admin', component: FormAdminComponent},
+  
  
 
   {
-    path: 'admin',
-    component: AdminComponent,
+    path: 'admin', 
+    component: AdminComponent, canActivate: [AuthGuard],
     children: [
       
       { path: '', component: ContactAdminComponent },
       { path: 'contact-admin', component: ContactAdminComponent },
       { path: 'devis-admin', component: DevisAdminComponent },
       { path: 'details/:id', component: DetailsComponent },
-      { path: 'details-devis/:id', component: DetailsDevisComponent }
+      { path: 'details-devis/:id', component: DetailsDevisComponent },
+      
 
     ]
   },

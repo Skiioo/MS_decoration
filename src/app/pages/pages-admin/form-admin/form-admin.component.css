@@ -1,0 +1,9 @@
+.grande-div {
+  margin-top: 100px;
+}
+
+.div-input span {
+  color: rgb(255, 0, 0);
+  margin-left: 10px;
+  font-weight: 500;
+}

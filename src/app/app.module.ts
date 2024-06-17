@@ -29,6 +29,8 @@ import { CommonModule } from '@angular/common';
 import { FbdevisComponent } from './pages/feedback/fbdevis/fbdevis.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { BackgroundComponent } from './components/background/background.component';
+import { FormAdminComponent } from './pages/pages-admin/form-admin/form-admin.component';
+import { AuthGuard } from './auth.guard';
 
 
 
@@ -52,6 +54,7 @@ import { BackgroundComponent } from './components/background/background.componen
     FbdevisComponent,
     ErrorPageComponent,
     BackgroundComponent,
+    FormAdminComponent,
 
 
   ],
@@ -69,7 +72,8 @@ import { BackgroundComponent } from './components/background/background.componen
     
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    [AuthGuard]
   ],
   bootstrap: [AppComponent]
 })
