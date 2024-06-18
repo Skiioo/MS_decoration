@@ -99,6 +99,10 @@
   font-family: Inter;
 }
 
+.sous-titre span {
+  color: rgba(26, 38, 68, 1);
+}
+
 .divbtn {
   margin-left: auto;
   margin-right: auto;

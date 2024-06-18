@@ -1,11 +1,14 @@
-<h1>Contactez-nous !</h1>
+<h1 class="text-2xl font-medium mb-5">Contactez-nous !</h1>
 <form
   [formGroup]="form"
-  class="max-w-xl mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-xl m-4 mt-9"
+  class="max-w-xl mx-auto bg-white rounded-xl shadow-xl overflow-hidden md:max-w-xl m-4 mt-9"
 >
   <div class="div-input p-8">
     <div class="div-input mb-4">
-      <label class="block text-gray-700 text-sm font-bold mb-2" for="lastname">
+      <label
+        class="block text-gray-700 text-sm font-medium mb-2"
+        for="lastname"
+      >
         Nom *
         <span
           *ngIf="form.controls['nom'].touched && form.controls['nom'].errors?.['required']"
@@ -24,7 +27,10 @@
     </div>
 
     <div class="div-input mb-4">
-      <label class="block text-gray-700 text-sm font-bold mb-2" for="firstname">
+      <label
+        class="block text-gray-700 text-sm font-medium mb-2"
+        for="firstname"
+      >
         Prénom *
         <span
           *ngIf="form.controls['prenom'].touched && form.controls['prenom'].errors?.['required']"
@@ -43,7 +49,7 @@
     </div>
 
     <div class="dic-input mb-4">
-      <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+      <label class="block text-gray-700 text-sm font-medium mb-2" for="email">
         Email *
         <span
           *ngIf="form.controls['email'].touched && form.controls['email'].errors?.['required']"
@@ -66,7 +72,7 @@
     </div>
 
     <div class="div-input mb-4">
-      <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">
+      <label class="block text-gray-700 text-sm font-medium mb-2" for="phone">
         Numéro de téléphone *
         <span
           *ngIf="form.controls['num'].touched && form.controls['num'].errors?.['required'] "
@@ -89,7 +95,7 @@
 
     <div class="div-input mb-6">
       <label
-        class="block text-gray-700 text-sm font-bold mb-2"
+        class="block text-gray-700 text-sm font-medium mb-2"
         for="description"
       >
         Description de votre projet *
@@ -109,7 +115,7 @@
 
     <div class="flex items-center justify-between">
       <button
-        class="bg-blue-500 mt-9 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        class="bg-blue-500 mt-9 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline"
         type="button"
         (click)="postData()"
         routerLink="/feedback-contact"

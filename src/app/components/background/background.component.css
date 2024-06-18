@@ -3,18 +3,12 @@
   position: absolute;
 }
 
-.container2 {
-  position: absolute;
-  margin-top: 500px;
-}
-
 .bande1 {
   width: 100%;
   height: 55px;
   margin-top: -55px;
   background-color: rgba(26, 38, 68, 1);
   position: absolute;
-
   z-index: -1;
 }
 
@@ -27,33 +21,6 @@
 }
 
 .bande3 {
-  width: 100%;
-  height: 55px;
-  margin-top: 55px;
-  background-color: rgba(217, 217, 217, 1);
-  position: absolute;
-  z-index: -1;
-}
-
-.bande4 {
-  width: 100%;
-  height: 55px;
-  margin-top: -55px;
-  background-color: rgba(26, 38, 68, 1);
-  position: absolute;
-
-  z-index: -1;
-}
-
-.bande5 {
-  width: 100%;
-  height: 55px;
-  background-color: rgba(84, 115, 189, 1);
-  position: absolute;
-  z-index: -1;
-}
-
-.bande6 {
   width: 100%;
   height: 55px;
   margin-top: 55px;

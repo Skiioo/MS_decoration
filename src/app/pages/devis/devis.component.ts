@@ -42,7 +42,7 @@ data: any = {
 }
 
 postDataDevis(){
-if (this.form.value.nom !== '' && this.form.value.prenom !== '' && this.form.value.email !== '' && this.form.value.surface !== '' && this.form.value.description !== '' && this.form.value.typeclient) {
+if (this.form.value.nom !== '' && this.form.value.prenom !== '' && this.form.value.email !== '' && this.form.value.surface !== '' && this.form.value.description !== '' && this.form.value.typeclient !== '' && this.form.value.peinture !== '' && this.form.value.societe !== '' && this.form.value.num !== '' && this.form.value.estimation !== '') {
 
   this.dataService.postDataDevis(this.form.value).subscribe(
     response => {

@@ -43,8 +43,8 @@ export class DataService {
     return this.http.get(`http://localhost:5000/devis/${id}`);
   }
 
-  checkCredentials(id: string, password: string): Observable<any> {
-    return this.http.post('http://localhost:5000/checkCredentials', { id, password });
+  postDataAdmin(id: string, password: string): Observable<any> {
+    return this.http.post('http://localhost:5000/admin', { id, password });
   }
 
   isAuthenticated = false;

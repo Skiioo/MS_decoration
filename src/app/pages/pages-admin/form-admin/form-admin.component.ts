@@ -26,7 +26,7 @@ export class FormAdminComponent {
     const id = this.form.get('id')!.value;
   const password = this.form.get('mdp')!.value;
 
-  this.checkCredentials(id, password).subscribe(response => {
+  this.postDataAdmin(id, password).subscribe(response => {
     if (response && response.valid) {
       this.authService.login();
       this.router.navigate(['/admin']);
@@ -36,7 +36,7 @@ export class FormAdminComponent {
   });
   }
 
-  checkCredentials(id: string, password: string): Observable<any> {
-    return this.http.post('http://localhost:5000/checkCredentials', { id, password });
+  postDataAdmin(id: string, password: string): Observable<any> {
+    return this.http.post('http://localhost:5000/admin', { id, password });
   }
 }
