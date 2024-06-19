@@ -18,7 +18,7 @@
   justify-content: space-around;
 }
 .texte {
-  width: 675px;
+  width: 600px;
 }
 .img-cuisine img {
   width: 350px;
@@ -126,4 +126,102 @@
   background-color: rgba(26, 38, 68, 1);
   color: white;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1100px) {
+  .container1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    justify-content: space-around;
+    gap: 40px;
+    margin-bottom: 100px;
+  }
+  .div-img {
+    margin-bottom: 100px;
+  }
+
+  .container2respons {
+    display: flex;
+    flex-direction: column-reverse !important;
+  }
+
+  .bg-titre-2 {
+    background-color: rgba(26, 38, 68, 1);
+    border-radius: 15px;
+    padding: 10px;
+    width: 200px;
+    margin-bottom: 20px;
+  }
+
+  .img-cuisine img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .cercle-bleu-fonce {
+    background-color: rgba(26, 38, 68, 1);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cercle-bleu-claire {
+    background-color: rgba(84, 115, 189, 1);
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cercle-gris {
+    background-color: rgba(217, 217, 217, 1);
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .titre1 {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Inter;
+    color: white;
+  }
+
+  .titre {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    font-family: Inter;
+    color: white;
+  }
+
+  .bg-titre {
+    background-color: rgba(26, 38, 68, 1);
+    border-radius: 15px;
+    padding: 10px;
+    width: fit-content;
+    margin-bottom: 20px;
+  }
+  .titre1-2 {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Inter;
+    color: white;
+  }
+  .texte {
+    width: 350px;
+  }
 }

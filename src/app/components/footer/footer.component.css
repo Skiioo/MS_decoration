@@ -57,3 +57,24 @@
   cursor: pointer;
   color: rgb(161, 161, 161);
 }
+
+@media screen and (max-width: 860px) {
+  .footer {
+    flex-direction: column;
+    gap: 20px;
+    height: 600px;
+  }
+  .container-footer-1 {
+    text-align: center;
+  }
+  .div-container {
+    flex-direction: column;
+  }
+  .div-img img {
+    width: 150px;
+  }
+  .container-footer-2 {
+    align-items: center !important ;
+    justify-content: center !important;
+  }
+}

@@ -1,0 +1,8 @@
+.carte {
+  margin-top: 200px;
+  margin-bottom: 300px;
+}
+svg {
+  transform: rotate(180deg);
+  margin-right: 10px;
+}

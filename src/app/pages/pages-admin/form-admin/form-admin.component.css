@@ -7,3 +7,10 @@
   margin-left: 10px;
   font-weight: 500;
 }
+h1 {
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+  text-align: center;
+  margin-top: 100px;
+  font-family: Inter;
+}

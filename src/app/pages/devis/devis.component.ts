@@ -23,7 +23,7 @@ form:FormGroup = new FormGroup({
   estimation: new FormControl('', [Validators.required]),
   peinture: new FormControl('', [Validators.required]),
   typeclient: new FormControl('', [Validators.required]),
-  num: new FormControl('', [Validators.required]),
+  num:new FormControl('', [Validators.required, Validators.pattern(/^\d{9}$/)]),
   
 })
 
@@ -36,9 +36,7 @@ data: any = {
   surface:'',
   peinture:'',
   estimation:'',
-  typeclient:'',
-  
-
+  typeclient:'',                  
 }
 
 postDataDevis(){
