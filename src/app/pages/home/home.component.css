@@ -132,6 +132,7 @@
   .texte {
     width: 500px;
     text-align: justify;
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 650px) {

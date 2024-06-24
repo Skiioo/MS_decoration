@@ -41,21 +41,23 @@
   </ul>
 </nav>
 <ul>
-  <div class="burger-menu" [class.active]="isMenuOpen" (click)="closeMenu()">
-    <li><a class="" routerLink="/">Accueil</a></li>
+  <div class="burger-menu" [class.active]="isMenuOpen">
+    <li><a class="" routerLink="/" (click)="closeMenu()">Accueil</a></li>
 
     <li>
-      <a class="" routerLink="/devis">Devis</a>
+      <a class="" routerLink="/devis" (click)="closeMenu()">Devis</a>
     </li>
     <li>
-      <a class="" routerLink="/realisation">Réalisation</a>
+      <a class="" routerLink="/realisation" (click)="closeMenu()"
+        >Réalisation</a
+      >
     </li>
     <li>
-      <a class="" routerLink="/a-propos">À propos</a>
+      <a class="" routerLink="/a-propos" (click)="closeMenu()">À propos</a>
     </li>
 
     <li>
-      <div class="contact" routerLink="/contact">
+      <div class="contact" routerLink="/contact" (click)="closeMenu()">
         <a class="">Contact</a>
       </div>
     </li>
