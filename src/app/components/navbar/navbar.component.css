@@ -12,10 +12,12 @@
   height: 70px;
   z-index: 5;
 }
+.icon-menu {
+  visibility: hidden;
+}
 
 .lien {
   display: flex;
-
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
@@ -67,5 +69,75 @@ a:hover {
   margin-right: 100px;
 }
 
+.menu-none {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.burger-menu {
+  display: none;
+}
+
 @media screen and (max-width: 860px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    top: 0;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    height: 70px;
+    z-index: 5;
+  }
+
+  .lien {
+    display: flex;
+    flex-direction: column;
+  }
+  .div-img img {
+    width: 70px;
+    height: auto;
+    border-radius: 7px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .icon-menu {
+    visibility: visible;
+    position: fixed;
+    left: 0;
+    margin-left: 20px;
+  }
+
+  .burger-menu.active {
+    top: 0; /* Position finale, affiche le menu */
+  }
+  .burger-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    margin-top: 65px;
+    top: -100%; /* Position initiale, cache le menu */
+    transition: top 0.5s ease; /* Anime la propriété left */
+    z-index: 3;
+    background-color: white;
+    padding: 10px;
+    width: 100%;
+    vertical-align: middle;
+  }
+  .menu-none {
+    display: none;
+  }
+  .contact {
+    margin-left: 0px;
+  }
+
+  li {
+    padding: 5px;
+    font-size: 20px;
+  }
 }

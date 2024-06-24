@@ -66,3 +66,9 @@ img {
   align-items: center;
   justify-items: center;
 }
+
+@media screen and (max-width: 1000px) {
+  .texte {
+    text-align: justify;
+  }
+}

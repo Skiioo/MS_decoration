@@ -32,3 +32,10 @@ h3 {
   color: rgb(255, 0, 0);
   margin-left: 10px;
 }
+@media screen and (max-width: 900px) {
+  .div-all {
+    display: flex;
+    flex-direction: column-reverse;
+    z-index: 2;
+  }
+}

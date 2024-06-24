@@ -1,8 +1,47 @@
 <nav class="navbar">
+  <div class="icon-menu" (click)="toggleMenu()">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="size-8"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+      />
+    </svg>
+  </div>
   <ul class="lien">
     <div class="div-img">
       <a routerLink="/"> <img src="../../../assets/icon/logo.png" alt="" /> </a>
     </div>
+    <div class="menu-none">
+      <li><a class="" routerLink="/">Accueil</a></li>
+
+      <li>
+        <a class="" routerLink="/devis">Devis</a>
+      </li>
+      <li>
+        <a class="" routerLink="/realisation">Réalisation</a>
+      </li>
+      <li>
+        <a class="" routerLink="/a-propos">À propos</a>
+      </li>
+
+      <li>
+        <div class="contact" routerLink="/contact">
+          <a class="">Contact</a>
+        </div>
+      </li>
+    </div>
+  </ul>
+</nav>
+<ul>
+  <div class="burger-menu" [class.active]="isMenuOpen" (click)="closeMenu()">
     <li><a class="" routerLink="/">Accueil</a></li>
 
     <li>
@@ -20,5 +59,5 @@
         <a class="">Contact</a>
       </div>
     </li>
-  </ul>
-</nav>
+  </div>
+</ul>

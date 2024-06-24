@@ -50,3 +50,25 @@ h1 {
   font-family: Inter;
   margin-top: 35px;
 }
+
+@media screen and (max-width: 1000px) {
+  .real {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(8, auto);
+    width: 100%;
+  }
+  .img {
+    width: 300px;
+    height: 300px;
+  }
+  .cercle-gris {
+    width: 350px;
+    height: 350px;
+  }
+  .div-img-text {
+    width: 350px;
+  }
+  .div-img-text p {
+    font-size: 15px;
+  }
+}
