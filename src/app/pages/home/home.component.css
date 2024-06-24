@@ -133,12 +133,14 @@
     width: 500px;
     text-align: justify;
     font-size: 20px;
+    padding: 5px;
   }
 }
 @media screen and (max-width: 650px) {
   .texte {
-    width: 325px;
+    width: 350px;
     text-align: justify;
+    padding: 5px;
   }
 }
 
