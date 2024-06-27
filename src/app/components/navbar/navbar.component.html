@@ -42,23 +42,33 @@
 </nav>
 <ul>
   <div class="burger-menu" [class.active]="isMenuOpen">
-    <li><a class="" routerLink="/" (click)="closeMenu()">Accueil</a></li>
+    <li>
+      <div routerLink="/" (click)="closeMenu()"><a class="">Accueil</a></div>
+    </li>
 
     <li>
-      <a class="" routerLink="/devis" (click)="closeMenu()">Devis</a>
+      <div routerLink="/devis" (click)="closeMenu()">
+        <a class="">Devis</a>
+      </div>
     </li>
     <li>
-      <a class="" routerLink="/realisation" (click)="closeMenu()"
-        >Réalisation</a
+      <div routerLink="/realisation" (click)="closeMenu()">
+        <a class="">Réalisation</a>
+      </div>
+    </li>
+    <li>
+      <div
+        class="btn-menu-respons"
+        routerLink="/a-propos"
+        (click)="closeMenu()"
       >
-    </li>
-    <li>
-      <a class="" routerLink="/a-propos" (click)="closeMenu()">À propos</a>
+        <a class="">À propos</a>
+      </div>
     </li>
 
     <li>
       <div class="contact" routerLink="/contact" (click)="closeMenu()">
-        <a class="">Contact</a>
+        <a>Contact</a>
       </div>
     </li>
   </div>

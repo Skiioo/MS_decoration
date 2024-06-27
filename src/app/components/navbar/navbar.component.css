@@ -127,7 +127,6 @@ a:hover {
     background-color: white;
     padding: 10px;
     width: 100%;
-    vertical-align: middle;
   }
   .menu-none {
     display: none;
@@ -141,5 +140,9 @@ a:hover {
     font-size: 20px;
     width: 100%;
     text-align: center;
+  }
+
+  .btn-menu-respons {
+    width: 100%;
   }
 }

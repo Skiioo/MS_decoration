@@ -54,22 +54,38 @@ if (this.form.value.nom !== '' && this.form.value.prenom !== '' && this.form.val
     }
   );
 }
-}
+} 
 
   constructor(private dataService: DataService, private router:Router) {
     this.estimation = 0;
-    this.style = 0;
+    this.etat = 0;
     this.surface = 0;
   }
 
-  style: number;
+  etat: number;
   surface: number;
   estimation: number = 0;
 
  
 
   estimate() {
-    this.estimation = this.style * this.surface;
+
+    if(this.etat == 1 && this.surface == 15) {
+      this.estimation = 1485;
+    } else if(this.etat == 1 && this.surface == 30) {
+      this.estimation = 2979;
+    } else if (this.etat == 1 && this.surface == 60) {
+      this.estimation = 6816;
+    } else if (this.etat == 2 && this.surface == 15) {
+      this.estimation = 1928;
+    } else if (this.etat == 2 && this.surface == 30) {
+      this.estimation = 4260;
+    } else if (this.etat == 2 && this.surface == 60) {
+      this.estimation = 8136;
+    }
+
+  
+   
   }
 
   

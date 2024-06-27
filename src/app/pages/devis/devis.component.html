@@ -199,6 +199,8 @@
     </div>
   </div>
 
+  <!-- Formulaire d'estimation du devis -->
+
   <div
     class="flex-1 max-w-xl mx-auto bg-white rounded-xl shadow-xl overflow-hidden md:max-w-xl m-4 mt-9 border-gray-300 border-2"
   >
@@ -211,28 +213,31 @@
             <label for="surface" class="block text-sm font-medium text-gray-700"
               >Surface au sol (en m²)
             </label>
-            <input
-              type="number"
-              class="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-              id="surface"
+            <select
               name="surface"
-              placeholder="Surface en m²"
+              id="surface"
+              class="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
               [(ngModel)]="surface"
-            />
+            >
+              <option value="0">Sélectionnez...</option>
+              <option value="15">15 m²</option>
+              <option value="30">30 m²</option>
+              <option value="60">60 m²</option>
+            </select>
           </div>
           <div>
-            <label for="style" class="block text-sm font-medium text-gray-700"
-              >Style de peinture</label
+            <label for="etat" class="block text-sm font-medium text-gray-700"
+              >État actuel</label
             >
             <select
               class="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
               id="style"
               name="style"
-              [(ngModel)]="style"
+              [(ngModel)]="etat"
             >
               <option value="0">Sélectionnez...</option>
-              <option value="0.5">Matte</option>
-              <option value="100">Brillant</option>
+              <option value="1">Bon</option>
+              <option value="2">Moyen</option>
             </select>
           </div>
           <div class="estimation-result" name="estimation">
