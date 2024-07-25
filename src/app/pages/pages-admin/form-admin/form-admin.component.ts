@@ -24,7 +24,7 @@ export class FormAdminComponent {
 
   onSubmit() {
     const id = this.form.get('id')!.value;
-  const password = this.form.get('mdp')!.value;
+    const password = this.form.get('mdp')!.value;
 
   this.postDataAdmin(id, password).subscribe(response => {
     if (response && response.valid) {
