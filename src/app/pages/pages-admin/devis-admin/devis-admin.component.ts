@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrl: './devis-admin.component.css'
 })
 export class DevisAdminComponent {
-  data: any[] = []; // Cette propriété stockera le nom provenant de l'API
+  data: any[] = []; 
 
   constructor(private dataService: DataService) { 
     this.dataService.getDataDevis().subscribe((data: any) => { 
@@ -20,7 +20,7 @@ export class DevisAdminComponent {
   delete(id: number) {
     this.dataService.deleteDevis(id).subscribe(
       response => {
-        // Supprimez l'élément de votre tableau de données seulement si la suppression a réussi sur le serveur
+       
         this.data = this.data.filter(item => item.id !== id);
       },
       error => {

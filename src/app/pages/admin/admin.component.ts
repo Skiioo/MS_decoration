@@ -21,7 +21,7 @@ export class AdminComponent {
   delete(id: number) {
     this.dataService.delete(id).subscribe(
       response => {
-        // Supprimez l'élément de votre tableau de données seulement si la suppression a réussi sur le serveur
+        
         this.data = this.data.filter(item => item.id !== id);
       },
       error => {

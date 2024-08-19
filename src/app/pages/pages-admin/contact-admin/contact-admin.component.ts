@@ -13,7 +13,7 @@ import { HttpClient } from '@angular/common/http';
 export class ContactAdminComponent {
  
 
-  data: any[] = []; // Cette propriété stockera le nom provenant de l'API
+  data: any[] = []; 
 
   constructor(private dataService: DataService) { 
     this.dataService.getData().subscribe((data: any) => { 
@@ -25,7 +25,7 @@ export class ContactAdminComponent {
   delete(id: number) {
     this.dataService.delete(id).subscribe(
       response => {
-        // Supprimez l'élément de votre tableau de données seulement si la suppression a réussi sur le serveur
+        
         this.data = this.data.filter(item => item.id !== id);
       },
       error => {
