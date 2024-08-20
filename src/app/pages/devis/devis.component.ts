@@ -18,10 +18,10 @@ form:FormGroup = new FormGroup({
   prenom: new FormControl('', [Validators.required]),
   email: new FormControl('', [Validators.required, Validators.email]),
   description: new FormControl('', [Validators.required]),
-  societe: new FormControl('', [Validators.required]),
+  societe: new FormControl('', []),
   surface: new FormControl('', [Validators.required]),
   estimation: new FormControl('', [Validators.required]),
-  peinture: new FormControl('', [Validators.required]),
+  peinture: new FormControl('', []),
   typeclient: new FormControl('', [Validators.required]),
   num:new FormControl('', [Validators.required, Validators.pattern(/^\d{9}$/)]),
   
@@ -40,7 +40,7 @@ data: any = {
 }
 
 postDataDevis(){
-if (this.form.value.nom !== '' && this.form.value.prenom !== '' && this.form.value.email !== '' && this.form.value.surface !== '' && this.form.value.description !== '' && this.form.value.typeclient !== '' && this.form.value.peinture !== '' && this.form.value.societe !== '' && this.form.value.num !== '' && this.form.value.estimation !== '') {
+if (this.form.value.nom !== '' && this.form.value.prenom !== '' && this.form.value.email !== '' && this.form.value.surface !== '' && this.form.value.description !== '' && this.form.value.typeclient !== ''  && this.form.value.num !== '' && this.form.value.estimation !== '') {
 
   this.dataService.postDataDevis(this.form.value).subscribe(
     response => {

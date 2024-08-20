@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AdminComponent {
 
-  data: any[] = []; // Cette propriété stockera le nom provenant de l'API
+  data: any[] = []; 
 
   constructor(private dataService: DataService) { 
     this.dataService.getData().subscribe((data: any) => { 

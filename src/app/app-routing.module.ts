@@ -44,7 +44,7 @@ const routes: Routes = [
     path: 'admin', 
     component: AdminComponent, canActivate: [AuthGuard],
     children: [
-      
+
       { path: '', component: ContactAdminComponent },
       { path: 'contact-admin', component: ContactAdminComponent },
       { path: 'devis-admin', component: DevisAdminComponent },
