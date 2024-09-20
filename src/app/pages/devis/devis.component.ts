@@ -56,6 +56,11 @@ if (this.form.value.nom !== '' && this.form.value.prenom !== '' && this.form.val
 }
 } 
 
+
+
+
+
+
   constructor(private dataService: DataService, private router:Router) {
     this.estimation = 0;
     this.etat = 0;
@@ -67,7 +72,6 @@ if (this.form.value.nom !== '' && this.form.value.prenom !== '' && this.form.val
   estimation: number = 0;
 
  
-
   estimate() {
 
     if(this.etat == 1 && this.surface == 15) {

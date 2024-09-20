@@ -25,7 +25,6 @@ export class ContactComponent {
   form:FormGroup = new FormGroup({
     prenom: new FormControl('', [Validators.required]),
     nom: new FormControl('', [Validators.required]),
-
     email: new FormControl('', [Validators.required, Validators.email]),
     description: new FormControl('', [Validators.required]),
     num:new FormControl('', [Validators.required, Validators.pattern(/^\d{9}$/)]),
@@ -46,13 +45,13 @@ export class ContactComponent {
 
   
   postData() {
-    //vérification des donner des les inputs
+    
     if (Object.values(this.form.value).every(value => value !== '')) {
       this.dataService.postData(this.form.value).subscribe(
         response => {
           console.log('Données envoyées avec succès', response);
 
-          //redirection de l'utilisateur quand le formulaire est validé
+          
           this.router.navigate(['feedback-contact'])
         },
         error => {
